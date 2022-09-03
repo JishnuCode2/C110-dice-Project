@@ -31,13 +31,18 @@ def show_dice(no):
 
 
 #input variable
-q = input("Roll Dice(y/n) >> ")
+response = input("Roll Dice(y/n) ? >> ")
 
 
-if(q == 'y'):  
+while response == 'y' :
 
     #random number
     no = random.randint(1,6)
 
     #showing output
     show_dice(no)
+    response = input("Reroll dice(y/n) ? >> ")
+
+if(response == 'n'):
+    print('...Thank you for rolling...')
+ 
